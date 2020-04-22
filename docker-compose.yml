@@ -1,0 +1,14 @@
+version: "2"
+services:
+    app:
+      container_name: erave-landing
+      build: .
+      restart: always
+      expose:
+        - 2002
+
+networks:
+  default:
+    external:
+      name: nginx-proxy-manager_default
+

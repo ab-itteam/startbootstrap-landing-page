@@ -3,7 +3,7 @@ FROM node:12.2.0-alpine as gulp-build
 WORKDIR /app
 COPY . ./
 RUN npm install
-RUN gulp
+RUN node_modules/.bin/gulp
 
 # Stage 2 - the production environment
 FROM nginx:alpine
